@@ -1,0 +1,24 @@
+/* Дизайн-токены. Пока значения-заглушки: меняем, когда определимся
+   с айдентикой — шрифтами, цветом, характером. Всё остальное в проекте
+   ссылается только на эти переменные, поэтому смена палитры — правка
+   одного файла. */
+
+:root {
+  --cb-font-text: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --cb-font-display: Georgia, 'Times New Roman', serif;
+
+  --cb-ink: #1c1815;
+  --cb-ink-soft: #6d635a;
+  --cb-paper: #ffffff;
+  --cb-paper-warm: #f6f2ed;
+  --cb-line: #e2dbd2;
+  --cb-accent: #a8452a;
+  --cb-accent-hover: #8d3722;
+  --cb-on-accent: #ffffff;
+
+  --cb-radius: 10px;
+  --cb-radius-pill: 999px;
+  --cb-gap: 12px;
+  --cb-tap: 44px;
+  --cb-ease: cubic-bezier(0.2, 0.7, 0.3, 1);
+}

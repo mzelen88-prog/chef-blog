@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>chef-blog — локальный превью</title>
+
+<!-- Тильда грузит jQuery на каждой странице. Держим его здесь,
+     чтобы ловить конфликты локально, а не на живом сайте. -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+<!-- Огрублённая имитация CSS Тильды: те же приёмы, которые чаще всего
+     ломают чужой код — сброс по тегам, свои шрифты, жёсткие правила
+     на ссылки и кнопки. Если наш компонент выживает здесь, он выживет
+     и в Тильде. -->
+<style>
+  body, h1, h2, h3, p, ul, li { margin: 0; padding: 0; }
+  body.t-body { font-family: Arial, sans-serif; color: #000; background: #fff; }
+  a { color: #ff8562; text-decoration: underline; }
+  button { font-family: Arial, sans-serif; font-size: 16px; border-radius: 0; }
+  .t-rec { padding: 40px 0; }
+  .t-container { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
+  .t-title { font-size: 36px; line-height: 1.23; font-weight: 600; }
+  .t-descr { font-size: 18px; line-height: 1.55; color: #333; }
+
+  /* только для превью, на сайте этого нет */
+  .pv-note { background: #fffbe6; border: 1px solid #f0e0a0; padding: 12px 16px;
+             font: 13px/1.5 ui-monospace, Menlo, monospace; margin-bottom: 8px; }
+  .pv-label { font: 11px/1 ui-monospace, Menlo, monospace; letter-spacing: .1em;
+              text-transform: uppercase; color: #999; margin-bottom: 12px; }
+</style>
+
+<!-- Наш бандл — ровно так же, как он подключается в head сайта Тильды -->
+<link rel="stylesheet" href="/build/site.min.css">
+<script defer src="/build/site.min.js"></script>
+</head>
+
+<body class="t-body">
+
+<div class="t-rec" id="rec100000001">
+  <div class="t-container">
+    <p class="pv-label">rec100000001 · статичный блок</p>
+    <h1 class="t-title">Локальный превью</h1>
+    <p class="t-descr">
+      Страница имитирует окружение Тильды: jQuery, сброс по тегам, свои стили
+      ссылок и кнопок. Компоненты ниже приезжают из <code>build/site.min.js</code>.
+    </p>
+  </div>
+</div>
+
+<div class="t-rec" id="rec100000002">
+  <div class="t-container">
+    <p class="pv-label">rec100000002 · блок T123 из blocks/share.html</p>
+    <div class="cb-share" data-cb="share" data-cb-title="Тестовый пост">
+      <p class="cb-share__title">Поделиться</p>
+    </div>
+  </div>
+</div>
+
+<div class="t-rec" id="rec100000003">
+  <div class="t-container">
+    <p class="pv-label">rec100000003 · отложенная вставка</p>
+    <div class="pv-note">
+      Этот блок появится через 1,5 секунды — так Тильда подгружает блоки при
+      скролле. Если кнопки в нём отрисовались, значит MutationObserver работает
+      и лениво отрисованные блоки мы не теряем.
+    </div>
+    <div id="pv-lazy"></div>
+  </div>
+</div>
+
+<script>
+  // Имитация ленивой отрисовки блока Тильдой
+  setTimeout(function () {
+    document.getElementById('pv-lazy').innerHTML =
+      '<div class="cb-share" data-cb="share" data-cb-title="Пост из ленивого блока">' +
+      '<p class="cb-share__title">Поделиться</p></div>';
+  }, 1500);
+
+  window.addEventListener('load', function () {
+    console.log('[preview] jQuery:', window.jQuery ? window.jQuery.fn.jquery : 'нет');
+    console.log('[preview] CB:', window.CB);
+  });
+</script>
+
+</body>
+</html>
