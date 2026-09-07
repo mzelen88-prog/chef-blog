@@ -19,6 +19,8 @@
   gap: 12px;
 }
 
+.cb-dishes + .cb-note { margin-top: 20px; }
+
 .cb-dishes li {
   background: var(--cb-paper-warm);
   border-radius: var(--cb-radius);
@@ -73,6 +75,7 @@
 
 .cb-offer__sub {
   font-size: 16px;
+  line-height: 1.55;
   color: var(--cb-ink-soft);
   margin: 0 0 20px;
 }
