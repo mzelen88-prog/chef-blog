@@ -84,11 +84,18 @@ data-атрибутам и дальше следит за DOM через `Mutati
 
 Настройки сайта → Ещё → HTML-код в head:
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/USER/chef-blog@v1.2/build/site.min.css">
-    <script defer src="https://cdn.jsdelivr.net/gh/USER/chef-blog@v1.2/build/site.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mzelen88-prog/chef-blog@v0.1/build/site.min.css">
+    <script defer src="https://cdn.jsdelivr.net/gh/mzelen88-prog/chef-blog@v0.1/build/site.min.js"></script>
+
+Репозиторий: https://github.com/mzelen88-prog/chef-blog (публичный — jsDelivr
+раздаёт только открытые).
 
 Версия в URL зафиксирована тегом. Откат при поломке — поменять цифру и
 опубликовать: одна правка, без деплоя.
+
+**Тег никогда не перезаписывается.** jsDelivr кеширует содержимое тега надолго,
+поэтому `git tag -f` даст расхождение между репозиторием и тем, что реально
+отдаётся браузеру. Каждый релиз — новый тег.
 
 Разметка компонентов лежит в `blocks/` — по файлу на блок T123 или HTML-элемент
 Zero Block. Меняешь разметку в репозитории, копируешь в Тильду. Логика и стили
