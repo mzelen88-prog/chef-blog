@@ -45,10 +45,10 @@ ${html}
 
 if (watch) {
   for (const job of jobs) (await context(job)).watch();
-  buildPreviewPage('dinner-2026-09-18', 'Сидровый ужин в Ферменто', 'preview/dinner.html');
+  buildPreviewPage('dinner-2026-09-18', 'Гастро-ужин в Ферменто', 'preview/dinner.html');
   console.log('watch: слежу за src/ — Ctrl+C чтобы остановить');
 } else {
   await Promise.all(jobs.map(build));
-  buildPreviewPage('dinner-2026-09-18', 'Сидровый ужин в Ферменто', 'preview/dinner.html');
+  buildPreviewPage('dinner-2026-09-18', 'Гастро-ужин в Ферменто', 'preview/dinner.html');
   console.log('готово: build/site.min.js + build/site.min.css');
 }
