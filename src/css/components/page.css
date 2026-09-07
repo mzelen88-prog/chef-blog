@@ -90,3 +90,16 @@
 @media (prefers-reduced-motion: reduce) {
   .cb-btn { transition: none; }
 }
+
+.cb-warning {
+  margin: 22px 0 0;
+  padding: 12px 16px;
+  border: 1px solid var(--cb-line);
+  border-radius: var(--cb-radius);
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--cb-ink-soft);
+  max-width: var(--cb-measure);
+}
