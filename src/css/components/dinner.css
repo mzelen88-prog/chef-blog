@@ -1,0 +1,83 @@
+/* Страница ужина: шапка, карточки блюд, факты, блок с ценой. */
+
+.cb-hero { padding: 48px 0 40px; }
+
+.cb-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  font-size: 15px;
+  color: var(--cb-ink-soft);
+  margin: 0 0 22px;
+}
+
+.cb-dishes {
+  list-style: none;
+  margin: 22px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.cb-dishes li {
+  background: var(--cb-paper-warm);
+  border-radius: var(--cb-radius);
+  padding: 16px 18px;
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: var(--cb-measure);
+}
+
+.cb-facts {
+  margin: 0;
+  display: grid;
+  gap: 0;
+  max-width: var(--cb-measure);
+}
+
+.cb-facts__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--cb-line);
+}
+
+.cb-facts__row:first-child { border-top: 1px solid var(--cb-line); }
+
+.cb-facts__key {
+  flex: 0 0 8.5em;
+  font-size: 14px;
+  color: var(--cb-ink-soft);
+}
+
+.cb-facts__val {
+  flex: 1 1 12em;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.cb-offer {
+  background: var(--cb-paper-warm);
+  border-radius: var(--cb-radius);
+  padding: 26px 24px;
+  max-width: var(--cb-measure);
+}
+
+.cb-offer__price {
+  font-family: var(--cb-font-display);
+  font-size: 34px;
+  line-height: 1;
+  margin: 0 0 6px;
+}
+
+.cb-offer__sub {
+  font-size: 16px;
+  color: var(--cb-ink-soft);
+  margin: 0 0 20px;
+}
+
+@media (max-width: 480px) {
+  .cb-facts__key { flex-basis: 100%; }
+  .cb-offer { padding: 22px 18px; }
+}

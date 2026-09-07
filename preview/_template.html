@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}} — превью</title>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+<!-- Огрублённая имитация CSS Тильды: сброс по тегам, свои стили ссылок
+     и кнопок. Выживает здесь — выживет и на боевом сайте. -->
+<style>
+  body, h1, h2, h3, p, ul, li { margin: 0; padding: 0; }
+  body.t-body { font-family: Arial, sans-serif; color: #000; background: #fdfaf5; }
+  a { color: #ff8562; text-decoration: underline; }
+  button { font-family: Arial, sans-serif; font-size: 16px; border-radius: 0; }
+  ul { list-style: disc; padding-left: 20px; }
+
+  .pv-label { font: 11px/1 ui-monospace, Menlo, monospace; letter-spacing: .1em;
+              text-transform: uppercase; color: #c3b8a4; padding: 0 20px;
+              max-width: 46em; margin: 0 auto 6px; }
+</style>
+
+<link rel="stylesheet" href="/build/site.min.css">
+<script defer src="/build/site.min.js"></script>
+</head>
+<body class="t-body">
+{{BODY}}
+</body>
+</html>

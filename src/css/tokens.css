@@ -1,24 +1,28 @@
-/* Дизайн-токены. Пока значения-заглушки: меняем, когда определимся
-   с айдентикой — шрифтами, цветом, характером. Всё остальное в проекте
-   ссылается только на эти переменные, поэтому смена палитры — правка
-   одного файла. */
+/* Дизайн-токены. Всё в проекте ссылается только на эти переменные,
+   поэтому смена палитры или шрифта — правка одного файла.
+
+   Направление: тёплая ремесленная гастрономия. Кремовая бумага вместо
+   белого, чернила с коричневым подтоном, акцент — цвет сидра.
+   Шрифты пока системные: не тянем внешние файлы, которые в России
+   могут грузиться долго. Заменим, когда выберем гарнитуры. */
 
 :root {
-  --cb-font-text: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --cb-font-display: Georgia, 'Times New Roman', serif;
+  --cb-font-text: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
-  --cb-ink: #1c1815;
-  --cb-ink-soft: #6d635a;
-  --cb-paper: #ffffff;
-  --cb-paper-warm: #f6f2ed;
-  --cb-line: #e2dbd2;
-  --cb-accent: #a8452a;
-  --cb-accent-hover: #8d3722;
-  --cb-on-accent: #ffffff;
+  --cb-ink: #211b14;
+  --cb-ink-soft: #6f6355;
+  --cb-paper: #fdfaf5;
+  --cb-paper-warm: #f3ece0;
+  --cb-line: #e2d9c9;
+  --cb-accent: #8a4a14;
+  --cb-accent-hover: #6f3b0f;
+  --cb-on-accent: #fffdf9;
 
   --cb-radius: 10px;
   --cb-radius-pill: 999px;
   --cb-gap: 12px;
   --cb-tap: 44px;
+  --cb-measure: 34em;
   --cb-ease: cubic-bezier(0.2, 0.7, 0.3, 1);
 }

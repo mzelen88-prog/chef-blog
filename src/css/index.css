@@ -1,3 +1,5 @@
 @import './tokens.css';
 @import './base.css';
+@import './components/page.css';
+@import './components/dinner.css';
 @import './components/share.css';

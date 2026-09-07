@@ -1,0 +1,92 @@
+/* Примитивы страницы: колонка, типографика текста, кнопки.
+   Всё под своими классами — блоки Тильды не задеваются. */
+
+.cb-wrap {
+  font-family: var(--cb-font-text);
+  color: var(--cb-ink);
+  max-width: 46em;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.cb-section { padding: 40px 0; }
+.cb-section + .cb-section { border-top: 1px solid var(--cb-line); }
+
+.cb-eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cb-ink-soft);
+  margin: 0 0 14px;
+}
+
+.cb-h1 {
+  font-family: var(--cb-font-display);
+  font-size: clamp(32px, 6vw, 52px);
+  line-height: 1.1;
+  font-weight: 400;
+  margin: 0 0 18px;
+}
+
+.cb-h2 {
+  font-family: var(--cb-font-display);
+  font-size: clamp(23px, 3.4vw, 30px);
+  line-height: 1.2;
+  font-weight: 400;
+  margin: 0 0 16px;
+}
+
+.cb-lead {
+  font-size: clamp(18px, 2.2vw, 21px);
+  line-height: 1.5;
+  margin: 0 0 20px;
+  max-width: var(--cb-measure);
+}
+
+.cb-prose p {
+  font-size: 17px;
+  line-height: 1.65;
+  margin: 0 0 16px;
+  max-width: var(--cb-measure);
+}
+
+.cb-prose p:last-child { margin-bottom: 0; }
+.cb-prose em { color: var(--cb-ink-soft); font-style: italic; }
+
+.cb-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--cb-tap);
+  padding: 0 26px;
+  border: 1px solid var(--cb-accent);
+  border-radius: var(--cb-radius-pill);
+  background: var(--cb-accent);
+  color: var(--cb-on-accent);
+  font: inherit;
+  font-size: 16px;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.18s var(--cb-ease), border-color 0.18s var(--cb-ease);
+}
+
+.cb-btn:hover {
+  background: var(--cb-accent-hover);
+  border-color: var(--cb-accent-hover);
+  color: var(--cb-on-accent);
+}
+
+.cb-btn:focus-visible { outline: 2px solid var(--cb-ink); outline-offset: 3px; }
+
+.cb-note {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--cb-ink-soft);
+  margin: 14px 0 0;
+  max-width: var(--cb-measure);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cb-btn { transition: none; }
+}
