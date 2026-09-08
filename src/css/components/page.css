@@ -103,3 +103,23 @@
   color: var(--cb-ink-soft);
   max-width: var(--cb-measure);
 }
+
+.cb-h3 {
+  font-family: var(--cb-font-text);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 26px 0 12px;
+}
+
+.cb-prose a {
+  color: var(--cb-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.cb-prose a:hover { color: var(--cb-accent-hover); }
+
+.cb-prose strong { font-weight: 600; }
+
+.cb-section .cb-facts { margin-top: 4px; }
