@@ -84,3 +84,10 @@
   .cb-facts__key { flex-basis: 100%; }
   .cb-offer { padding: 22px 18px; }
 }
+
+.cb-offer__hint {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--cb-ink-soft);
+  margin: 16px 0 0;
+}
