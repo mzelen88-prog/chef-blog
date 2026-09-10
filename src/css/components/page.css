@@ -112,13 +112,15 @@
   margin: 26px 0 12px;
 }
 
-.cb-prose a {
+/* :not(.cb-btn) обязателен — иначе это правило перекрашивает текст кнопки
+   в цвет её же фона, и кнопка становится пустой пилюлей. */
+.cb-prose a:not(.cb-btn) {
   color: var(--cb-accent);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
-.cb-prose a:hover { color: var(--cb-accent-hover); }
+.cb-prose a:not(.cb-btn):hover { color: var(--cb-accent-hover); }
 
 .cb-prose strong { font-weight: 600; }
 
