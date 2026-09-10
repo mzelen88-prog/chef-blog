@@ -47,10 +47,12 @@ if (watch) {
   for (const job of jobs) (await context(job)).watch();
   buildPreviewPage('dinner-2026-09-18', 'Гастро-ужин в Ферменто', 'preview/dinner.html');
   buildPreviewPage('privacy', 'Политика обработки персональных данных', 'preview/privacy.html');
+  buildPreviewPage('home', 'Максим Кудюков', 'preview/home.html');
   console.log('watch: слежу за src/ — Ctrl+C чтобы остановить');
 } else {
   await Promise.all(jobs.map(build));
   buildPreviewPage('dinner-2026-09-18', 'Гастро-ужин в Ферменто', 'preview/dinner.html');
   buildPreviewPage('privacy', 'Политика обработки персональных данных', 'preview/privacy.html');
+  buildPreviewPage('home', 'Максим Кудюков', 'preview/home.html');
   console.log('готово: build/site.min.js + build/site.min.css');
 }
